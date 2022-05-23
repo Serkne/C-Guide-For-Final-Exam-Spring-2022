@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: CMakeLists.txt
+  visible: false
+- name: cmake-build-debug/CMakeFiles/clion-log.txt
+  visible: true
+- name: test/test.cpp
+  visible: false
+- name: src/variableManipulation.cpp
+  visible: true
+  placeholders:
+  - offset: 52
+    length: 42
+    placeholder_text: /* INSERT YOUR CODE HERE, DON'T EDIT THE REST OF THIS CODE */

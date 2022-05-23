@@ -1,0 +1,143 @@
+{
+  "course_version" : 1,
+  "environment" : "Catch",
+  "summary" : "This is a guide for the final exam for the course \"Digital Technologies 4\". \n\nIn this guide you will find information and/or practice excercises for the next topics:\n\t- Structure of a program\n\t\t* What are libraries?\n\t\t\t~ Basic functions (printf, scanf)\n\t\t* How does a program run?\n\t\t* Commments\n\t- Variables\n\t\t* Declaration\n\t\t* Data types\n\t- Operators\n\t\t* Arithmetic\n\t\t* Logical\n\t\t* Comparison\n\t- Flow Control (conditionals)\n\t\t* If-else and variations\n\t\t* Switch-case\n\t- Functions\n\t\t* Declaration and Definition\n\t\t* Recursion\n\t- Loops\n\t\t* While\n\t\t* For",
+  "title" : "C Guide for Final Exam (Spring 2022)",
+  "programming_language" : "ObjectiveC",
+  "language" : "en",
+  "course_type" : "Marketplace",
+  "items" : [
+    {
+      "id" : 1237934167,
+      "title" : "StructureOfCode",
+      "task_list" : [
+        {
+          "id" : 2027698438,
+          "name" : "SimplePrint",
+          "files" : {
+            "test/output.txt" : {
+              "name" : "test/output.txt",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "KPHR2Vpi7h7OHMd0Y7V/Nm20NWc5DEHf1tib9C+ZusW5f8OW+KbDCGoSMAPpa0ZO"
+            },
+            "CMakeLists.txt" : {
+              "name" : "CMakeLists.txt",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "SFQsvbCzAxH06IHZ31X7VYJiXt1G4dXOtGy1KgiP+oSAcglnxKRgse85XXjXAfal88EhcOyTGblEbyguv7tUXUa1Fbd1/IzUOvSMOzo9sHx2ypGv/YTS6qotOUBYY0SQJcuSXtMN8F1mQqsfhIISAdTl1cBD3Y7wZZp0L4gpAJegLBWwm2ZgN5HsR+2+4+1TBylebfPZO3YZRynhBY0xfqpDQnMQFvfwgs97ebNOma+w2PtN8NbCOn0WYowca6LdMdDBqRVkO7JhrzIk03HLIWtjtZk9mG+Pr7DtbKsoQvTLPe9v/DH8ArKVIw5ZWAj/sF3NJCIlOBkaVV5eoSrKOVUL6+Ah5yVQedd3BHfwvSN+mcvpYLSP6nB07cLj1JvR7Upyesdjyy1ncL8DYYx7BSduQh0EZ5EOR2GAcTC5HyfJRS+Y75iuIzeUkWI8InWM"
+            },
+            "src/simplePrint.c" : {
+              "name" : "src/simplePrint.c",
+              "placeholders" : [
+                {
+                  "offset" : 0,
+                  "length" : 28,
+                  "possible_answer" : "EIqcAg3fvoq/lZ4JOkVYM0ATvgeMfr1WAqE+WJOrsuzUzMRmRNvAtxlMtU8fzTvvNJHg4ao99GJf9aVZYifPdBSfviFJIFTtbsQuHy92ExsX4QLsxPE+5Rx8dImO4ytW0g88oHoDeE+ilffto8AcFg==",
+                  "placeholder_text" : "/* Insert your code here! */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "7OK3qUP4Oj8kakL/6PoEZTr33s+deQ8ec6DXc0St1T8="
+            }
+          },
+          "description_text" : "# Structure of a Code\n*************************************************************\n## Task instructions:\nFor this task, you must write a simple code that prints the text:\n\n> I love coding in C.\n>\n> This is my first task.\n\nWith the line separation.\n\nUse this checklist to guide yourself:\n- [ ] Write the needed [libraries](#libraries)\n- [ ] Write the main function\n- [ ] Write the [printf function](#Basic-Functions) that you will use\n  - Remember to include the required [escape sequence](#escape-sequences) to separate\n    in lines.\n- [ ] Test the program using the `Check` button below\n\nUse the description below to understand better how to correctly write\nthe code.\n*************************************************************\n<h2 id = \"libraries\">[What are Libraries?](https://www.programiz.com/c-programming/library-function)</h2>\n\n***Libraries*** are a compilation of functions\nthat are already programmed to execute certain\nactions, you can freely use them and check their\ndocumentation online.\n\nTo use a certain library inside your code, you\nmust type **At the Beginning of your Code**\nthe statement:\n\n    #include<NAMEOFTHELIBRARY>\n\nFor example:\n\nUsually the functions `printf()` and `scanf()`\nare found inside the library `stdio.h` which is why\nalmost always we begin every code with the statement\n\n    #include<stdio.h>\n*************************************************************\n<h3 id = \"Basic-Functions\">Usage of Basic Functions [`printf()`](http://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_es.html) and [`scanf()`](https://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_function_scanf_es.html)</h3>\n\nThe function `printf()` allows you to show in console some text.\nThe way to use it is as follows:\n\n    printf(\"Text to be displayed\");\n\n<h4 id = \"escape-sequences\">Escape Sequences</h4>\nThis syntax is used for different scenarios, depending on where you\nwrite them you can change the style of the printed text.\n\n![Escape sequences](C-CPP-Escape-Sequences.png)\n\n#### Format Specifiers\nTo display the value of any variable, you must use the correct\nformat specifier, check the table below for reference.\n\n|       Data Type       | Format Specifier | Example                                                                 |\n|:---------------------:|:----------------:|-------------------------------------------------------------------------|\n|          int          |        %d        | `printf(\"This prints the int %d\", variable);`                           |\n|         char          |        %c        | `printf(\"This prints the char %c\", variable);`                          |\n|         float         |        %f        | `printf(\"This prints the float %f\", variable);`                         |\n| float with n decimals |       %.nf       | `printf(\"This prints the float with 2 decimal points %.2f\", variable);` |\n|        string         |        %s        | `printf(\"This prints the string %s\", variable);`                        |\n\nThis is an example to print a whole text with two different variables:\n\n    printf(\"Value of variable 1 of \\\"integer\\\" type: %d\\nValue of variable 2 of \\\"character\\\" type: %c\", intVariable, charVariable);\n\nIf `intVariable = 156` and `charVariable = 'a'`\n\nthis prints out &rarr;\n\n>Value of variable 1 of \"integer\" type: 156\n>\n> Value of variable 2 of \"character\" type: a\n\n*************************************************************\n## How does a program run?\n\nThe code you write is first compiled, this means:\n\n- The computer reads line by line everything in your code, following\n  the instructions you gave it.\n- It detects the libraries you declared at the beginning of your\n  program and checks the available functions from each library.\n- It reads [*global variables and/or functions*](course://lesson2/task1/task.md)\n  their declaration and their definition.\n- Then it enters the `main()` function, where the statements to be\n  executed are found.\n- If inside the `main()` function, another function is called,\n  the program will skip to this second function definition and read the\n  statements inside, when it reaches a `return`, it will **return**\n  to where it left off in the `main()` function.\n\n[//]: # ()\n[//]: # (This is a task description file.)\n\n[//]: # (Its content will be displayed to a learner)\n\n[//]: # (in the **Task Description** window.)\n\n[//]: # ()\n[//]: # (It supports both Markdown and HTML.)\n\n[//]: # (To toggle the format, you can rename **task.md**)\n\n[//]: # (to **task.html**, or vice versa.)\n\n[//]: # (The default task description format can be changed)\n\n[//]: # (in **Preferences | Tools | Education**,)\n\n[//]: # (but this will not affect any existing task description files.)\n\n[//]: # ()\n[//]: # (The following features are available in)\n\n[//]: # (**task.md/task.html** which are specific to the EduTools plugin:)\n\n[//]: # ()\n[//]: # (- Hints can be added anywhere in the task text.)\n\n[//]: # (Type \"hint\" and press Tab.)\n\n[//]: # (Hints should be added to an empty line in the task text.)\n\n[//]: # (In hints you can use both HTML and Markdown.)\n\n[//]: # (<div class=\"hint\">)\n\n[//]: # ()\n[//]: # (Text of your hint)\n\n[//]: # ()\n[//]: # (</div>)\n\n[//]: # ()\n[//]: # (- You may need to refer your learners to a particular lesson,)\n\n[//]: # (task, or file. To achieve this, you can use the in-course links.)\n\n[//]: # (Specify the path using the `[link_text]&#40;course://lesson1/task1/file1&#41;` format.)\n\n[//]: # ()\n[//]: # (- You can insert shortcuts in the task description.)\n\n[//]: # (While **task.html/task.md** is open, right-click anywhere)\n\n[//]: # (on the **Editor** tab and choose the **Insert shortcut** option)\n\n[//]: # (from the context menu.)\n\n[//]: # (For example: &shortcut:FileStructurePopup;.)\n\n[//]: # ()\n[//]: # (- Insert the &percnt;`IDE_NAME`&percnt; macro,)\n\n[//]: # (which will be replaced by the actual IDE name.)\n\n[//]: # (For example, **%IDE_NAME%**.)\n\n[//]: # ()\n[//]: # (- Insert PSI elements, by using links like)\n\n[//]: # (`[element_description]&#40;psi_element://link.to.element&#41;`.)\n\n[//]: # (To get such a link, right-click the class or method)\n\n[//]: # (and select **Copy Reference**.)\n\n[//]: # (Then press &shortcut:EditorPaste; to insert the link where appropriate.)\n\n[//]: # (For example, a [link to the \"contains\" method]&#40;psi_element://java.lang.String#contains&#41;.)\n\n[//]: # ()\n[//]: # (- You can add link to file using **full path** like this:)\n\n[//]: # (  `[file_link]&#40;file://lesson1/task1/file.txt&#41;`.)",
+          "description_format" : "MD",
+          "task_type" : "output"
+        }
+      ],
+      "type" : "lesson"
+    },
+    {
+      "id" : 1942121111,
+      "title" : "Variables",
+      "task_list" : [
+        {
+          "id" : 804722337,
+          "name" : "VariableManipulation",
+          "files" : {
+            "CMakeLists.txt" : {
+              "name" : "CMakeLists.txt",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "SFQsvbCzAxH06IHZ31X7VYJiXt1G4dXOtGy1KgiP+oSAcglnxKRgse85XXjXAfalAGqqsxLcdb+SlMLcoqes/YqEJCbDyp7Wc/KoXqZSqEKBlYfIK0Fg7JZpolxhAbrHX+Y5c8aimmAEyiO6pgCw1v8aggw9G/MF5mBgThFV5x9ogyjv9iFnHcTQdtWWNS9PM8bFgm4LkbvuwxjMyZhD1lMijNp18pITuHhqINlHRcEWgm63md5dF2JrSBf5qk0NSaMWvQuJf3wGTtEBnkThHoTvDeSp+oE8V7rsx+y16mHeB0bk/CMrNCJMqbUknt2cW9R+fk5/Fh9kElb6/k1Bd0csj022I8Fl8RfIcsLih4OgE77EQkSPdPDZwM1t6Usl/7MbDV3VwqM21lZtg8Owa7O2B+M3d36NCUWgw+6e/F+l3PUnQ2MSPdja8aMhbgsoC+Lq8XlfoveXpEHGEou//sY72O3kYlgOGfYAI/42b/8p2w8Gzyg9evJdGwhvzeJiV7WIRnk4sDu00MBDxRqYesZzoCRx6XlCfaXqscqxhqUMDLuqco61wl0zzOjoClqFlAshk9X3Ojihp7HPb4ZRUAqky8DukZYDpO9fsH4PnuximTYo/NIOgQdgCJCpfRfM7XX2TIWeWcuuD2mXAzJ965XdbgOADIc3cpVCeFjDpBwDCS38c3d8FGUqz8JbtR4vXp6SLxYVk7rYK7jCui1vEkZ/JHS29zkhgYklEwe2IO9t5193Ry5OUo73GiFjkZVOyvfjkaN+CMOvUUB1lgI+bA=="
+            },
+            "test/test.cpp" : {
+              "name" : "test/test.cpp",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "OaYK//3d5R+JqWTLRMDjJR2vWVuyqDEZhztJ9JQG4P9PjkGxR1domOTLtYdM+w69hWw+OBJWEvHs/8GWOlMQrK6unacgrw1RKuDZF0jxpqWHm17mFnm9uEvrIsH1JSj1i+0ieash5gsShTK6wlX4iTbrTy2RDig2trB/XD0bDMe1s6XExfvEGQcKLvpdJhkb7XTzEcML7OKfunLT1HhB15RKkZ7kC+Q/tZV7cS7q2KnYwpaGL0hXHo/Z0FR+dWhxchECIgTMqZT+KJT2VlzR7ryRG41wXt1MB+o7PaU76zNUbp7Kawsd8JgvLeEGPJKOCp7+rPWt74P2F1sXhM+LpP2+VuCDRZp2Tkdeddm5TdVO9rY9jM9CIUMTogfg+fAPnFk+KQ8W10L3IFTwnAaY4nYIHgqL0SDHS9Q3prfintqrN1jwTDYC3mfXxVxBdCF5ctpYKvmQ6lzgEDVcCTmBfEZqYQheyf5Hhjl39hOR8EUwDwrj9k1gPdi54c7DOHGbATVa2NwbPYEzdychUGIY2r1q/e3gkRY3l/hjHpA7HZpIT1mSaZaRyfr0BIZn3Y4ba50bEC8Q6xoZStBDq+xYg73fVYTg60lZUupJC9oJ5pcpBmVp7t9CYKLazTyVgzEJ8M1vHVoGHC3+KhaLKAOdkCPyAZ9oo9zxCrdV3F45PAXbkZDoVnkXSUNCaFWij7kd2CVcH3eRiSXULExlhA9zsgjwviFyLh0zSnsnD20zZIE="
+            },
+            "src/variableManipulation.cpp" : {
+              "name" : "src/variableManipulation.cpp",
+              "placeholders" : [
+                {
+                  "offset" : 51,
+                  "length" : 61,
+                  "possible_answer" : "I2+d+/73z5V+MNlZ4TRkmphZkolycnZ4kOU4a281mGLsaoYA3RbUl7SZ06Rm5n/r",
+                  "placeholder_text" : "/* INSERT YOUR CODE HERE, DON'T EDIT THE REST OF THIS CODE */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "6bs8tN9TfZQjamoxXNXssyqNge8L+h3+5AfAGkT8rktk0WdidlB82izA6aaPv6AMlW/xuXm1pAwy1aMAPWjtN9NeTts+q8jt0aLVgA6tJK5mx3EN3ep/ijSbJWQ/KfNL7gCAth7QuXUs+av7wY40NsZz7SmZTB2ydDO5rU2Gmr+7UMwMzgdSrH9HBOHqTZqR4IXmQa6bjRJb7XAtgoSZDnQGV83PNng53Ume7gwIUu2H2EidTaPfx/ietecvwpMyKXF42MscKBHQTt+akCfILw=="
+            }
+          },
+          "description_text" : "<h1 id=\"variables\">Variables</h1>\n\n*************************************\n<h2 id=\"instructions\">Instructions</h2>\n\nIn this task given two numbers **a** and **b**, you need to swap their values so \n**a** holds the value of **b** and **b** holds the value of **a**.\n\n<h2 id=\"task\">Your Task:</h2>\n\nJust write the code to swap values of **a** and **b** at the specified place.\nThe input and output are done automatically.\n\n### **Example 1:**\n\n    Input:\n      a = 1\n      b = 2\n    Output:\n      2 1\n    Explanation: Initially a = 1 and b = 2,\n    now a = 2 and b = 1.\n\n### **Example 2:**\n\n    Input:\n      a = 6\n      b = 7\n    Output: \n      7 6\n    Explanation: Initially a = 6 and b = 7,\n    now a = 7 and b = 6.\n",
+          "description_format" : "MD",
+          "solution_hidden" : false,
+          "task_type" : "edu"
+        },
+        {
+          "id" : 1653632647,
+          "name" : "task2",
+          "files" : {
+            "CMakeLists.txt" : {
+              "name" : "CMakeLists.txt",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "SFQsvbCzAxH06IHZ31X7VYJiXt1G4dXOtGy1KgiP+oSAcglnxKRgse85XXjXAfalQHlaWXiF30hn2NMdp/tirqSiHCkDjdRcOFFG/e5KIF12YCWjP/2+btN7fThkb/hmNNuwddR9+0i9Nxv/l+U/fxz2ouk0D64BvND+wcJWqebfGO+R09ZUUIKNBx/tpIHbdtj1y3HhXZ0vs+NlWSqZBbCf4EldrMBFeoMAhiQgJI5NrBvHGSe3Sj++tdSMXArOy3mt+YGaIgYa7mXwI8RIcjkCo0nTBkyaI+9WrhI5J5jqkamX8u5sn4iVqR6IO4+yWiUm+73uQKJ5vpsGysGG1cSBgEKAZ09+DURyycyp2ApRBtC1JAlx0xHy9Mnzfml+okm9jRcc4D3KYaCysk3G9k8/EmPtql4QOYltA+Lj/3AiGRoNTpEeX75BtaoAAIQsPnXuxlqfv4ur/+iDGjJiGbRO6UMvR2lhZfRx34NAfM5JOOndT4+WM/3IVgl3sGY5K16rI66RwjFaw+wjQIZ0iht4+txRUlESmj68ns86cFnfATgGWbQ38YLtTczRdSjgZWDnlPfuQQCz7cSM0FEEs5HhC95PGqCgzL6vHZ6aueysVnDGswhG8ZGoY9CTr3qPhzmoYR3n/kgnz38f3cYy8heH7FVwuAm0AAyAUz/piki1qMWlY+S0P6cAQE6vAOGW+JFZBXWwjWAVygpIiFjgDouYKU4APCPWj7eJv9qQRLg="
+            },
+            "src/task.cpp" : {
+              "name" : "src/task.cpp",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "Z1n4BOFShpvkJkMnKMTM0Hp2L3eZCm0hzOy1AHkKtO0GrpRc03iYXTVdog7+lt6yxxxSdxGcvBvMIxhND/QUvaQkCkmhJS0llHFbznOh5P5Hko2uo47AKrKRu8QbrOIF"
+            },
+            "test/test.cpp" : {
+              "name" : "test/test.cpp",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "OaYK//3d5R+JqWTLRMDjJR2vWVuyqDEZhztJ9JQG4P9PjkGxR1domOTLtYdM+w69hWw+OBJWEvHs/8GWOlMQrK6unacgrw1RKuDZF0jxpqWHm17mFnm9uEvrIsH1JSj1i+0ieash5gsShTK6wlX4iTbrTy2RDig2trB/XD0bDMcb7ap54znuJTYdqygQ6M3KofXLKifopbW4AHrO60upIDQ+bdFSQVLeeWTdmpgJ1gLsmfEG67nH8FVPi+/77oAc+JmSp7k9X0QEwFLvuPCoRZ71K04+BG2XqNnV1poVx78hVDeAzi6k5jkqwk2KlYvgHkv2l7vckFxrpi3a4//ylNul3fwGzZSuQ68b5H1NuCmuK4tQu26JkYuaz3htekBBikWzdwcGWvOKCr8BBseyZ3qZ1pqzD0lu/wXDeByyq60M9BMXHaEYiBHGmkHe0vg3M0xJmK62p7osjRfZYEgPaA=="
+            }
+          },
+          "description_text" : "\nThis is a task description file.\nIts content will be displayed to a learner\nin the **Task Description** window.\n\nIt supports both Markdown and HTML.\nTo toggle the format, you can rename **task.md**\nto **task.html**, or vice versa.\nThe default task description format can be changed\nin **Preferences | Tools | Education**,\nbut this will not affect any existing task description files.\n\nThe following features are available in\n**task.md/task.html** which are specific to the EduTools plugin:\n\n- Hints can be added anywhere in the task text.\nType \"hint\" and press Tab.\nHints should be added to an empty line in the task text.\nIn hints you can use both HTML and Markdown.\n<div class=\"hint\">\n\nText of your hint\n\n</div>\n\n- You may need to refer your learners to a particular lesson,\ntask, or file. To achieve this, you can use the in-course links.\nSpecify the path using the `[link_text](course://lesson1/task1/file1)` format.\n\n- You can insert shortcuts in the task description.\nWhile **task.html/task.md** is open, right-click anywhere\non the **Editor** tab and choose the **Insert shortcut** option\nfrom the context menu.\nFor example: &shortcut:FileStructurePopup;.\n\n- Insert the &percnt;`IDE_NAME`&percnt; macro,\nwhich will be replaced by the actual IDE name.\nFor example, **%IDE_NAME%**.\n\n- Insert PSI elements, by using links like\n`[element_description](psi_element://link.to.element)`.\nTo get such a link, right-click the class or method\nand select **Copy Reference**.\nThen press &shortcut:EditorPaste; to insert the link where appropriate.\nFor example, a [link to the \"contains\" method](psi_element://java.lang.String#contains).\n\n- You can add link to file using **full path** like this:\n  `[file_link](file://lesson1/task1/file.txt)`.",
+          "description_format" : "MD",
+          "task_type" : "edu"
+        }
+      ],
+      "type" : "lesson"
+    }
+  ],
+  "additional_files" : [
+    {
+      "name" : "cmake/catch.cmake",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "p/teAqufNyenNjbF0CPYDhHfkz13/RF9QshjbV0SIFA4wDETTzDDuD8oJRiaMavVOMBxhFEHsH+tsbAN4hQ03VyXmomHukvWPebEsy2g9kqMu4qdxg/30km9XsvVNwE/uzIBS1IUTmA99HrMea5FKJCiL/3AloIvUDrDIoOQ4jN9LrVZScxHuizBvFcAoPfCr6WYPFSSqYmuVtub+hiRzocTR4lW9dqA4KCw82CTx47yn0x/QBCwLu5x20bQEym+8RWaeWRvKzgkAgcH6ld6pRUrAMsNoL/dhi+qXTnEBKKErlboPnxtoCKUrAi8ZrAbP+DjrsTld+v5vuUCX9uMgKO8d2Jc/ZOBCEqbjsmkR4Fyq4oxDKD6iqE2nKw89LaBhnmmyctDwJlZg+Ep5moUMTSIQGk7Ajo/Q0GOmMDX7+UUPtuXyEZW4y4mftkKlgIcqOK80QhWwOfJsyG6eWmim7OSCKQ4JaUKz1lsx20DFqpxR3CziRdbL3W4XYtQmQoJ8eE6cFKWSkO3q3+AFl9TUZjm3x02E+mZ/BwXz2XBESwovk8TvH/DaMLD7tX1v3WX"
+    },
+    {
+      "name" : "cmake/utils.cmake",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "grRRIMi7kmpBcQ9poKZefYG7nyGCIKiFtDyPGbzks4jvMTVAZV/+Q289KgJ0EIxFcLeWqLiLH4CMLCNoqEuT/Puzx0Dk66YP0fzVlSXe+tw3zUVxP/7RR30twvytCOZ9VNvMsdnxQBra0oMnM0NuTEpCQTPL4tw2KSMGfEpI2jXeiZaE9EW97M5x3YyRN6WEwQG3lfoECGoPGIRVYce+HJzfpH5SvBnM037Kd/y7gotv2QQkRbzJrDnxQHTkf+av5+Z3iwGcnkZWMr9CljSSGJGufLrB5LoALvQ1qp7it1RdacRr8DFSXZ81ls8y3QDnh6fbFo2KzKGqQ88eEyiEVZik79bBxSVDpMdk7zikR/POWIrcYMA/dRQRu2Dvq5mTLFT4Kreac+Ms/U6YJHqgYLjt6ERCtSS4u50e2nJ5331hrRImej0MyeiIU0+u5NPrYmpJpV3XDWMbQk2ZgHwUBOrlekOcvUAi5Lvy9qB9p5tV/hiT7GhCHnDTuzwQPL1T0GUA6exQOyr8ygKjscOOdeAotiLPITUINSpz0JV04VhUg0j05qeOH0f1LleWGuB2balIPJ0s8GM0hZzjs7GRk2Kq224gbJ+/4bnHJAzLLpjS5At6X4pOqIQMGRZrPAQMeKySHpZu8iwy7TMKEIuCPze56AkyZb8KjAjdWeh9KslMLvYlQZcoudKaYkyJjJAeZpYBIeOzQFd0PpNat1JYoTQq0EzV2jPD6cUhZbqkgcPoY8rE3e0C3oZPC6XNg26afkaxr76QONoMwx8KCj6megTD2qd9oPoYC2brjIPNkVk16lQWSZZW4ojXGKYEMdOv0bRUPHXoXK0WZBtKytQxC5UNWl39+aqUTvPSOzWMrQ0yUQ2Ho9/kDzzf4vAsmfggYfc2fr8vwnp0vAVWnSgmvdX1re2pZ2CNTWEscxN5fcsypBqeryoQFehPHBxFoebyfz8e8TE8i81027ShNv7T4bsOAaQQcnl780Ej+ZpDVwhsc5weH79Rc3AegnIPzPL7z8r2FcrdBiMmK1TZAMUPBeoTM6jYTWHAsaUoH2S83nXWHkqcFnbL6uMYhxaUGrdFH1Y8vePkDe3qtuNuIfQBv4Lbjru9AZ04Ww+43isrBTO8fclgyjK5aI+RuExxU7pUuN/o/WofDc5znOXY16DLMeoc0JOsnsoJsr6FAWb8cfhmGzwlT5zxBf79XZG3fNLQSfzU6P2CNckhcwHNsE2a3m7MM4iA8Aby2q4LYrhciDT10PUKsAGPS8vAsFGe5xSerYqon9LcW3tRiTV09vMh/ZcuN9Lvlg1AI9FDKXCQHUXAnLugWA6XDOcUjvZWmcYAOAk+PyvmVJAQ7YTatF5eDxFQD2fzxqkhOpMEIImGWb0njFEc4GyN0nnqhY4VnhLvsRAXY+87Zyx8fAQMruMkl5uQYqijWSLLAY8y+AZ0yGV52BYqSE64CEpa7URp0sQ1uHqiVbi08gBUR8o1Gmlb341oCMYrdzlJiqPlOJ7+w9HgOdeeC0KbyC+r98XJh5r35tu/VRRuTR5KJ1j1Jtqp5jRpJWlwpQtxPtdhRoxSS2P01w0JML81fuu0YXfndRAFlnLLzJLAqj0kuJjod6smWlo51LIEA+nVu0nVs9U8pZYqSnoTdk3gfZy56hJ5cyfYL2KUJjmZR3hFU1OKwWlJ+LOR5/PUZ+qVPkVtSmi14xCff2b3AIcw3n6A9EwKtaEU"
+    },
+    {
+      "name" : "CMakeLists.txt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "ACMXN6SH4gEAFwrRMS4MkvSEMEnVYiljxuVyhMEcwyPdLZ45+liSIXcqxC19RLGArK7pCRQjEeWbqabmHsSwtf4wSrUyoHH7RlGk5MGZV7MtnpzIthU7zy5NAn6V1kUu5Z+CzlPjej/He3jO5UUoCxzvx7gWi/0L/E/qV24a0pM8fYidhWE0dAZb/74zF+p8pxkTIZdFSAlEiiHIkc+xpI6b8BwNS8sEGB7UK85yNB4r4Bphf6uuErQDcR0DYFok/bLjsxvAxpmxjvPzD/Z5uQkZ3AE9j29hNl+ZNRhqfuO6/7pGeXQMpknB//VjnyTzOu5Y5WjLTDHb47kWgts/l+OW5aI+6h/KvDR4RZ8WqCVy7h0FIs8BqJfYzsxJQPn5abeIQH7uzUhaIXUa8MFg/QptND7ihT8/PQPlTZQ+axe9KHOwFXI2Rj8Im7v+Qt/H8N/KXERYgn9vxiEFCG/zgrOagaB62mRhLbAyiMaLtbH55kpaTXp2g4qTwRUQGD4RQX1Aup8puKJW+nC/BXECqJLck/xoZcwFcroT6+po+MPEgbmjz/CIbatvx28dD1vVQE0Yj9cTXMP7NjDutgy751oP8RhEFpNc5vVAgWfZRAxtSmt47A1rlGrVOWkuyhaed9lTsL5KVyu1ZVG6p8x8h8GDaObRouUFJZ3GxoYRyH84Zq3TexY5sBOu7W6taBRg"
+    }
+  ],
+  "version" : 13,
+  "edu_plugin_version" : "2022.4-2022.1-218"
+}
